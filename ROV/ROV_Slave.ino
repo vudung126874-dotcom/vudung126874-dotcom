@@ -95,7 +95,7 @@ void loop() {
   }
 
   
-  // Read the desired motor speeds and write them to motors
+  
   String data;
   digitalWrite(SLAVE_EN, LOW);
 

@@ -1,4 +1,3 @@
-
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
@@ -188,7 +187,7 @@ void loop() {
   
 
 
-  //Send the joystick outputs to the drone if it's armed
+  
   if (flight_mode == ARMED) { 
     
     digitalWrite(MasterEnable, HIGH);
@@ -215,12 +214,12 @@ void loop() {
 
     while (flight_mode == DISARMED) {
     
-      // While the drone is disarmed we are only reading the battery voltage from the drone and displaying it
+     
 
       update_display();
       digitalWrite(MasterEnable, LOW);
 
-      //Update the flight modes again, eventually a function for this is required
+     
       SwitchRight_state = digitalRead(SwitchRight);
       flight_mode = SwitchRight_state;
 
@@ -231,12 +230,12 @@ void loop() {
           String data;
           data = Serial.readStringUntil('\n');
 
-          // Now, we need to get this data displayed on the screen, for now I'll write it to a terminal
+         
           DroneVoltage = data.toFloat();
 
           Serial.print("\n");
           Serial.print(DroneVoltage);
-          delay(100); //delay to make sure the battery voltage doesn't get read at random intervals
+          delay(100); 
           
           }
      }
