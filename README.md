@@ -7,7 +7,7 @@ Third-year Aerospace Engineering student at **Hanoi University of Science and Te
 
 ### 🛠 Technical Skills & Expertise
 - **Embedded Firmware:** Proficient in C/C++ for Microcontrollers (ESP32-C3, STM32). Experienced in low-level communication protocols: I2C, SPI, UART, and PWM signal management.
-- **Control Theory:** Hands-on experience implementing PID control loops for stability (Roll/Pitch/Yaw) and sensor fusion techniques[cite: 1].
+- **Control Theory:** Hands-on experience implementing PID control loops for stability (Roll/Pitch/Yaw) and sensor fusion technique[cite: 1].
 - **Engineering Science:** Strong foundation in Numerical Methods (Runge-Kutta, Navier-Stokes solvers), Fluid Mechanics, and Structural Strength Analysis.
 - **Software & Tools:** MATLAB/Simulink, Python, SolidWorks, Adurino IDE.
 
@@ -16,9 +16,9 @@ Third-year Aerospace Engineering student at **Hanoi University of Science and Te
 ### 🚀 Key Engineering Projects
 
 #### 🛸 Autonomous Flight Controller (ESP32-C3)
-- **Firmware Development:** Developed a custom flight control system using the ESP32-C3, writing drivers for MPU6050 IMU integration via I2C[cite: 1].
-- **Control Logic:** Implemented and optimized a dual-rate PID control system from scratch to ensure flight stability[cite: 1].
-- **Telemetry & Interface:** Integrated real-time telemetry and manual override capabilities via wireless communication protocols[cite: 1].
+- **Firmware Development:** Developed a custom flight control system using the ESP32-C3, writing drivers for MPU6050 IMU integration via I2C.
+- **Control Logic:** Implemented and optimized a dual-rate PID control system from scratch to ensure flight stability.
+- **Telemetry & Interface:** Integrated real-time telemetry and manual override capabilities via wireless communication protocols.
 - **Result:** Successfully completed construction and achieved stable flight testing in real-world environments.
 
 #### ⚓ Deep-Sea Mini ROV (50m Depth Project)
