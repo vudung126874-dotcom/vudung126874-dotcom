@@ -1,32 +1,27 @@
-# Prerequisites
-*.d
+# --- Thông tin nhạy cảm (QUAN TRỌNG) ---
+# Chứa mật khẩu Wi-Fi, API keys, hoặc credentials
+config.h
+secrets.h
+auth.py
+*.env
 
-# Compiled Object files
-*.slo
-*.lo
+# --- File rác của trình biên dịch (Build Artifacts) ---
+build/
+bin/
+obj/
 *.o
-*.obj
+*.elf
+*.bin
+*.hex
+*.map
 
-# Precompiled Headers
-*.gch
-*.pch
+# --- Thư mục của công cụ phát triển (IDEs/Tools) ---
+.vscode/
+.idea/
+.pio/
+node_modules/
+CMakeSettings.json
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+# --- File hệ thống ---
+.DS_Store
+Thumbs.db
