@@ -38,4 +38,3 @@ This project features a complete control system for a mini-underwater ROV design
 1. Connect RS485 modules to the hardware Serial pins (TX/RX).
 2. Use `MasterEnable` (Pin 3) and `Slave_EN` (Pin 5) for RS485 flow control.
 3. Libraries required: `Servo`, `SPI`, `Wire`, `Adafruit_GFX`, `Adafruit_SSD1306`.
-![alt text](image.png)
