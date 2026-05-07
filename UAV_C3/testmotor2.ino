@@ -45,10 +45,21 @@ void setup() {
 void loop() {
   Dabble.processInput();
   mpu.update();
-
-  float roll_act  = mpu.getAngleX() - offsetX;
-  float pitch_act = mpu.getAngleY() - offsetY;
-  float yaw_act   = mpu.getAngleZ() - offsetZ;
+  // setup mpu
+  x = mpu.getAngleX();
+  y = mpu.getAngleY();
+  z = mpu.getAngleZ();
+// bộ lọc kama 
+unsigned long now = millis();
+      float dt = (now - lastTime) / 1000.0;
+      if (dt <= 0) dt = 0.01;
+      lastTime = now;
+  double roll_kama = 0.98 * (roll_kama + x * 57.3 * dt) + 0.02 * ((atan2(y, z) * 57.3) - offsetX);
+ double pitch_kama = 0.98 * (pitch_kama + y * 57.3 * dt) + 0.02 * ((atan2(-x, sqrt(y*y + z*z)) * 57.3) - offsetY);
+ double yaw_kama = z * 57.3;
+  float roll_act  = roll_kama - offsetX;
+  float pitch_act = pitch_kama - offsetY;
+  float yaw_act   = yaw_kama  - offsetZ;
 
   if (GamePad.isSquarePressed()) {
     isArmed = !isArmed;
@@ -71,7 +82,7 @@ void loop() {
     }
   }
 
-  //  (Circle): Reset góc về 0 (Sử dụng trước khi cất cánh)
+  //  (Circle): Reset góc về 0
   if (GamePad.isCirclePressed()) {
     offsetX = mpu.getAngleX();
     offsetY = mpu.getAngleY();
